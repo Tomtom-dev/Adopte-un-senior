@@ -1,11 +1,8 @@
-
-
-footer{
-    background-color: #90D6CE;
+footer {
+    background-color: #90d6ce;
     height: 10vh;
 
-
-    .footer{
+    .footer {
         display: flex;
         justify-content: space-around;
         width: 50vw;
@@ -13,13 +10,20 @@ footer{
         height: 10vh;
         align-items: center;
 
-        a{
+        a {
             text-decoration: none;
             color: black;
         }
-        
-        a:hover{
+
+        a:hover {
             text-decoration: underline;
         }
     }
 }
+
+
+// @media screen and (max-height: 1200px){
+//     footer{
+//         bottom: ;
+//     }
+// }
