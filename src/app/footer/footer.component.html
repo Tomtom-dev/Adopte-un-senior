@@ -1,7 +1,18 @@
 <footer>
-    <div class="footer">
-        <a [routerLink]="['mentions-legales']" routerLinkActive="router-link-active" >Mentions Légales</a>
-        <a [routerLink]="['confidentialite']" routerLinkActive="router-link-active" >Politiques de confidentialités</a>
-        <a [routerLink]="['quisommesnous']" routerLinkActive="router-link-active" >Qui sommes nous ?</a>
+    <div>
+        <ul>
+            <li>
+                <a [routerLink]="['mentions-legales']" routerLinkActive="router-link-active" class="hover_animation" >Mentions Légales</a>
+            </li>
+            
+            <li>
+    
+                <a [routerLink]="['confidentialite']" routerLinkActive="router-link-active" class="hover_animation" >Politiques de confidentialités</a>
+            </li>
+            <li>
+    
+                <a [routerLink]="['quisommesnous']" routerLinkActive="router-link-active" class="hover_animation" >Qui sommes nous ?</a>
+            </li>
+        </ul>
     </div>
 </footer>
