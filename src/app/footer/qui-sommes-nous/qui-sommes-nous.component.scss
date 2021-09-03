@@ -27,3 +27,22 @@ h1{
         margin: 3vh 0;
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .qui{
+        width: 90%;
+    }
+    h1{
+        font-size: 34px;
+    }
+    .explications{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 18px;
+            margin: 2vh 0;
+        }
+    }
+}
