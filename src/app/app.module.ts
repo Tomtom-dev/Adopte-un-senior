@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AccueilContenuComponent } from './accueil-contenu/accueil-contenu.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilContenuComponent } from './accueil-contenu/accueil-contenu.component';
