@@ -6,7 +6,7 @@ import { AccueilContenuComponent } from './accueil-contenu/accueil-contenu.compo
 import { FooterComponent } from './footer/footer.component';
 import { ConfidentialiteComponent } from './footer/confidentialite/confidentialite.component';
 import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
-import { QuiSommesNousComponent } from './qui-sommes-nous/qui-sommes-nous.component';
+import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous.component';
 
 @NgModule({
   declarations: [
