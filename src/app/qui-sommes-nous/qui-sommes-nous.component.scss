@@ -1,0 +1,29 @@
+.qui{
+    width: 60%;
+    margin: auto;
+}
+.link{
+    display: flex;
+    align-content: center;
+    margin: 5vh 0;
+    i{
+        margin: 0 1vh;
+    }
+}
+
+h1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 8vh;
+}
+.explications{
+    h2{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5vh;
+    }
+    p{
+        font-size: 22px;
+        margin: 3vh 0;
+    }
+}

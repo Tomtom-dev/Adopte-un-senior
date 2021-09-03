@@ -26,3 +26,31 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .content{
+        width: 90%;
+        h1{
+            font-size: 35px;
+            margin-bottom: 5vh;
+        }
+        .informations{
+            flex-direction: column;
+            text-align: center;
+            img{
+                width: 100%;
+                border-radius: 5px;
+            }
+            .text{
+                font-size: 18px;
+                margin-left: 0vh;
+                p{
+                    margin: 2vh 0;
+                }
+                .utilite{
+                    margin: 3vh 0;
+                }
+            }
+        }
+    }
+}
