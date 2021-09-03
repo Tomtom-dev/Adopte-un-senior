@@ -9,12 +9,15 @@
         height: inherit;
         list-style-type: none;
         text-decoration: none;
-        align-items: center;
+        
+        
 
         li{
             
             margin-left: 1em;
             position: relative;
+            align-items: center;
+            height: 30px;
                 
                 ::before, ::after {
                     content: '';
