@@ -1,0 +1,52 @@
+.politique{
+    width: 60%;
+    margin: auto;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+.link{
+    display: flex;
+    align-content: center;
+    margin: 5vh 0;
+    i{
+        margin: 0 1vh;
+    }
+}
+.bold{
+    font-weight: bold;
+}
+h1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 8vh;
+}
+.explications{
+    h2{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5vh;
+    }
+    p{
+        font-size: 22px;
+        margin: 3vh 0;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .politique{
+        width: 90%;
+    }
+    h1{
+        font-size: 34px;
+    }
+    .explications{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 18px;
+            margin: 2vh 0;
+        }
+    }
+}
