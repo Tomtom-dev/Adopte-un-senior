@@ -5,7 +5,7 @@ footer{
     height: 10vh;
 
 
-    .footer{
+    ul{
         display: flex;
         justify-content: space-around;
         width: 50vw;
@@ -13,11 +13,13 @@ footer{
         height: 10vh;
         align-items: center;
 
-        a{
-            text-decoration: none;
-            color: black;
-        }
-        
-       
+        li{
+            display: flex;
+            margin-left: 1em;
+            position: relative;
+            align-items: center;
+            height: 30px;
+        }  
     }
+    
 }
