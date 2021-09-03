@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ConfidentialiteComponent } from './footer/confidentialite/confidentialite.component';
 import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
 import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous.component';
+import { AnnonceListComponent } from './annonce-list/annonce-list.component';
+import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
+import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous
     FooterComponent,
     ConfidentialiteComponent,
     MentionsLegalesComponent,
-    QuiSommesNousComponent
+    QuiSommesNousComponent,
+    AnnonceListComponent,
+    AnnonceCardComponent,
+    AnnonceFilterComponent
   ],
   imports: [
     BrowserModule,
