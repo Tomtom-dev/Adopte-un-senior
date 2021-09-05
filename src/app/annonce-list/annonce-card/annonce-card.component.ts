@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Annonce } from 'src/app/shared/models/annonce';
 
 @Component({
   selector: 'app-annonce-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./annonce-card.component.scss']
 })
 export class AnnonceCardComponent implements OnInit {
+
+  @Input() annonce!: Annonce;
 
   constructor() { }
 

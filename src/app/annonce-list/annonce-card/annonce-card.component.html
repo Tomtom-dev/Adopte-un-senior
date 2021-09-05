@@ -1,13 +1,17 @@
 <figcaption class="annonce">
-    <img src="https://www.ville-bagneresdebigorre.fr/Fichiers/pages/100727image-espace-famille.jpg" alt="test">
+    <div class="divImg">
+        <img src="{{annonce.img}}" alt="test">
+    </div>
     <figure>
         <div class="explications">
-            <p>Annonce de test titre</p>
-            <p>Qui est concerné</p>
-            <p>Lieu</p>
+            <p>{{annonce.title}}</p>
+            <p>démandé par {{annonce.type}}</p>
+            <p>à {{annonce.localisation}}</p>
         </div>
         <div class="myButton">
             <button>Voir plus</button>
         </div>
     </figure>
 </figcaption>
+
+<!-- annonces sous forme de liste ou de case -->

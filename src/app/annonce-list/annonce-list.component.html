@@ -2,4 +2,4 @@
 
 <app-annonce-filter></app-annonce-filter>
 
-<app-annonce-card></app-annonce-card>
+<app-annonce-card [annonce]="annonce" *ngFor="let annonce of annonces" ></app-annonce-card>
