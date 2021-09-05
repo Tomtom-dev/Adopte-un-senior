@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Annonce } from '../shared/models/annonce';
+import { AnnonceService } from '../shared/service/annonce.service';
 
 @Component({
   selector: 'app-annonce-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnnonceListComponent implements OnInit {
 
-  constructor() { }
+  annonces: Annonce[] = [];
+
+  constructor(private annonceService: AnnonceService) { }
 
   ngOnInit(): void {
+    this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
+      this.annonces = annonce;
+      console.log(annonce)
+    })
   }
 
 }

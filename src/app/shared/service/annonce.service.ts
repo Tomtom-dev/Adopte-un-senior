@@ -11,7 +11,7 @@ export class AnnonceService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<Annonce[]>{
-    return this.http.get<Annonce[]>(`${environment.url}`);
+  public getPosts(): Observable<Annonce[]>{
+    return this.http.get<Annonce[]>(`${environment.url}/annonce/`);
   }
 }
