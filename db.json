@@ -1,0 +1,14 @@
+{
+    "annonce": [
+        {
+            "id": 1,
+            "timeStamp": "05/09/2021",
+            "type": "association",
+            "title": "Service civique 1 mois activités pour les séniors",
+            "localisation": "Hénin-Beaumont",
+            "description": "Le but est de créer des activités pour les séniors une fois par semaine pour une durée de 4h.",
+            "img": "",
+            "auth_id": 1
+        }
+    ]
+}
