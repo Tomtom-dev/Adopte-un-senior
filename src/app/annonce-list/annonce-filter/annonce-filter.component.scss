@@ -1,0 +1,19 @@
+ul{
+    display: flex;
+    height: 40px;
+    margin: 4vh 0;
+    padding-left: 5vh;
+    li{
+        margin: 0 2vh;
+        border-bottom: 2px solid #90d6ce;
+        display: flex;
+        justify-content: center;
+        select, input{
+            width: 22vh;
+            height: 40px;
+            background-color: transparent;
+            font-size: 20px;
+            border: none;
+        }
+    }
+}
