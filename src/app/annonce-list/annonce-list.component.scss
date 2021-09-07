@@ -3,3 +3,16 @@ h1{
     font-size: 35px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 767px) {
+    h1{
+        width: 90%;
+        margin: 6vh auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1{
+        margin: 6vh 4vh;
+    }
+}
