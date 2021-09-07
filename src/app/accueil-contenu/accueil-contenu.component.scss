@@ -3,19 +3,19 @@
 .content{
     width: 70%;
     margin: 4vh auto;
-    height: $hauteur;
     h1{
         @include titleH1;
         text-align: center;
     }
     .informations{
         display: flex;
+        margin: 6em 0;
         img{
             width: 60%;
             border-radius: 5vh 0 0 5vh;
         }
         .text{
-            font-size: 25px;
+            font-size: 22px;
             margin-left: 3vh;
             p{
                 margin: 4vh 0;
