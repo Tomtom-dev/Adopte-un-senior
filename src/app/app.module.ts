@@ -12,6 +12,12 @@ import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous
 import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input'
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -24,12 +30,18 @@ import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-fi
     QuiSommesNousComponent,
     AnnonceListComponent,
     AnnonceCardComponent,
-    AnnonceFilterComponent
+    AnnonceFilterComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
