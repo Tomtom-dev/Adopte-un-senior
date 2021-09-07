@@ -1,0 +1,86 @@
+section{
+  height: 70vh;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 10vh 0 10vh 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mat-form-field {
+  width: 30em;
+  font-size: 18px;
+}
+.mat-form-field-flex {
+  background-color: transparent !important;
+}
+
+.loginBtn {
+  position: relative;
+  width: 15em;
+  height: 3em;
+  margin: 3em 0;
+  button {
+    width: 100%;
+    height: inherit;
+    color: black;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: #90d6ce;
+    padding: 0.35em 0.45em;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  button:focus {
+    outline: none;
+  }
+  button::placeholder {
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+  span {
+    position: absolute;
+    background-color: #000;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+  }
+  .bottom,
+  .top {
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+  }
+  .left,
+  .right {
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0);
+  }
+  .top {
+    top: 0;
+  }
+  .bottom {
+    bottom: 0;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  button:focus ~ .top,
+  button:focus ~ .bottom {
+    transform: scaleX(1);
+  }
+  button:focus ~ .left,
+  button:focus ~ .right {
+    transform: scaleY(1);
+  }
+}
