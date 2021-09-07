@@ -11,7 +11,8 @@ export class AnnonceListComponent implements OnInit {
 
   annonces: Annonce[] = [];
 
-  constructor(private annonceService: AnnonceService) { }
+  constructor(private annonceService: AnnonceService) {
+   }
 
   ngOnInit(): void {
     this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {

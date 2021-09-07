@@ -12,6 +12,9 @@ import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous
 import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
+ import { CarousselComponent } from './caroussel/caroussel.component';
+ import {CarouselModule} from 'primeng/carousel';
+ import { ButtonModule } from 'primeng/button';
 import { AnnonceFormComponent } from './annonce-form/annonce-form.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -21,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AnnonceListComponent,
     AnnonceCardComponent,
     AnnonceFilterComponent,
+    CarousselComponent,
     AnnonceFormComponent,
     AuthentificationComponent
   ],
@@ -41,6 +46,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    CarouselModule,
+    ButtonModule, 
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     MatInputModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
