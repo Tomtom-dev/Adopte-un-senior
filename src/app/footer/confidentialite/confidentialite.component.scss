@@ -1,6 +1,7 @@
 @import '../../../variables.scss';
 .politique{
     @include structurePageFooter;
+    height: $hauteur;
 }
 .link{
     @include linkPageFooter;

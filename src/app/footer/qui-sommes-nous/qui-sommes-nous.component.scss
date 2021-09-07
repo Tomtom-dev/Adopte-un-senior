@@ -2,6 +2,7 @@
 
 .qui{
     @include structurePageFooter;
+    height: $hauteur;
 }
 .link{
     @include linkPageFooter;
