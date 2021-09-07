@@ -4,18 +4,27 @@
     background-color: #90D6CE;
     height: 10vh;
     font-size: x-large;
-    border: 2px solid red;
-    ul{
+    justify-content: space-between;
+    align-items: center;
+    
+    .bloc1{
+
         display: flex;
-        height: inherit;
-        list-style-type: none;
-        text-decoration: none;
-        align-items: center;
-       img{
-           margin-left: 1em;
-           width: 5vw;
-           height: 5vw;
-       }
+
+        ul{
+            flex-direction: row;
+            display: flex;
+            height: inherit;
+            list-style-type: none;
+            text-decoration: none;
+            align-items: center;
+        }       
+        
+        img{
+            
+            width: 65px;
+            height: 65px;
+        }
         
         li{
             
@@ -34,3 +43,4 @@
     }
     
 }
+
