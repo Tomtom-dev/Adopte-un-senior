@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CarouselModule} from 'primeng/carousel';
+import { Annonce } from '../shared/models/annonce';
+import {AnnonceService} from '../shared/service/annonce.service'
 
 @Component({
   selector: 'app-caroussel',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarousselComponent implements OnInit {
 
-  constructor() { }
+  annonces: Annonce[] = [];
+
+  constructor(private annonceService: AnnonceService  ) { }
 
   ngOnInit(): void {
+    this.annonceService.getPosts().subscribe((annonce : Annonce[]) =>{
+      this.annonces= annonce;
+      console.log(annonce);
+    })
   }
-
 }

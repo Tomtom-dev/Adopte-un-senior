@@ -1,1 +1,10 @@
 <p>caroussel works!</p>
+<p-carousel [value]="annonces" [numVisible]="3" [numScroll]="1">
+    <ng-template let-car pTemplate="item">
+        <!-- <app-carrousel-card *ngFor="let annonce of annonces"></app-carrousel-card> -->
+        
+    </ng-template>
+    <ng-template let-annonce pTemplate="item">
+
+    </ng-template>
+</p-carousel>

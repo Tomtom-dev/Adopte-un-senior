@@ -13,6 +13,9 @@ import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
 import { CarousselComponent } from './caroussel/caroussel.component';
+import {CarouselModule} from 'primeng/carousel';
+import { CarrouselCardComponent } from './caroussel/carrousel-card/carrousel-card.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { CarousselComponent } from './caroussel/caroussel.component';
     AnnonceListComponent,
     AnnonceCardComponent,
     AnnonceFilterComponent,
-    CarousselComponent
+    CarousselComponent,
+    CarrouselCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule, 
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
