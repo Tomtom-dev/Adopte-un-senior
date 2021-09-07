@@ -1,22 +1,21 @@
+@import '../../variables.scss';
+
 section{
-  height: 70vh;
+  height: $hauteur70;
 }
 h1 {
   text-align: center;
-  font-size: 40px;
   margin: 10vh 0 10vh 0;
+  @include titleH1;
 }
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include formFormulaire;
 }
 .mat-form-field {
-  width: 30em;
-  font-size: 18px;
+  @include inputFormulaire;
 }
 .mat-form-field-flex {
-  background-color: transparent !important;
+  background-color: $bcgcolorTransparent;
 }
 
 .loginBtn {

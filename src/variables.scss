@@ -1,13 +1,25 @@
 $color-primary: #90d6ce;
 $color-secondary: hsl(236, 29%, 35%);
 $hauteur: 80vh;
+$hauteur70: 70vh;
+$bcgcolorTransparent: transparent !important;
 
 @mixin titleH1{
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 8vh;
 }
-
+//FORMULAIRE
+@mixin formFormulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin inputFormulaire{
+    width: 30em;
+    font-size: 18px;
+}
+//FIN FORMULAIRE
 
 //FILTRES
 @mixin ulFiltrePC {
