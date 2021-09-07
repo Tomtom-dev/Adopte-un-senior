@@ -1,13 +1,10 @@
+@import '../../../variables.scss';
 .politique{
-    width: 60%;
-    margin: auto;
-    border: 1px solid transparent;
-    box-sizing: border-box;
+    @include structurePageFooter;
+    height: $hauteur;
 }
 .link{
-    display: flex;
-    align-content: center;
-    margin: 5vh 0;
+    @include linkPageFooter;
     i{
         margin: 0 1vh;
     }
@@ -16,19 +13,14 @@
     font-weight: bold;
 }
 h1{
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 8vh;
+    @include titleH1;
 }
 .explications{
     h2{
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 5vh;
+        @include titleH2PageFooter
     }
     p{
-        font-size: 22px;
-        margin: 3vh 0;
+        @include pPageFooter;
     }
 }
 

@@ -13,11 +13,14 @@ import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
 import { AnnonceFormComponent } from './annonce-form/annonce-form.component';
+import { AuthentificationComponent } from './authentification/authentification.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AnnonceCardComponent,
     AnnonceFilterComponent,
     AnnonceFormComponent
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,14 @@
+@import '../../../variables.scss';
+
 .annonce {
-    // border: 1px solid grey;
-    // overflow: hidden;
     filter: drop-shadow(0 0 0.75rem lightgrey);
     background-color: rgb(238, 236, 236);
-    width: 45%;
+    width: 60%;
     height: 250px;
     margin: 5vh auto;
     display: flex;
     .divImg {
         width: 100%;
-        // border: 5px solid rgba(250, 250, 250, 0.8);
         overflow: hidden;
         img{
             width: 100%;
@@ -42,7 +41,7 @@ button {
     padding: 0.5em 1em;
     outline: none;
     border: none;
-    background-color: hsl(236, 29%, 35%);
+    background-color: $color-secondary;
     overflow: hidden;
     transition: color 0.4s ease-in-out;
 }
@@ -56,7 +55,7 @@ button::before {
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    background-color: #90D6CE;
+    background-color: $color-primary;
     transform-origin: center;
     transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
     transition: transform 0.45s ease-in-out;
@@ -71,3 +70,31 @@ button:hover::before {
     transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
 }
 
+@media screen and (max-width: 767px) {
+    .annonce{
+        width: 90%;
+        height: 20em;
+        flex-direction: column;
+        .divImg{
+            height: 20vh;
+        }
+        figure{
+            padding: 0;
+        }
+        .explications{
+            margin: 2vh;
+            height: 4em;
+        }
+        .myButton{
+            justify-content: flex-start;
+            padding-left: 2vh;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .annonce{
+        width: 80%;
+        height: 10em;
+    }
+}
