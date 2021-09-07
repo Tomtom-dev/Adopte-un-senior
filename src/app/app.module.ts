@@ -14,7 +14,7 @@ import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.c
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
 import { CarousselComponent } from './caroussel/caroussel.component';
 import {CarouselModule} from 'primeng/carousel';
-import { CarrouselCardComponent } from './caroussel/carrousel-card/carrousel-card.component';
+
 import { ButtonModule } from 'primeng/button';
 
 @NgModule({
@@ -29,8 +29,8 @@ import { ButtonModule } from 'primeng/button';
     AnnonceListComponent,
     AnnonceCardComponent,
     AnnonceFilterComponent,
-    CarousselComponent,
-    CarrouselCardComponent
+    CarousselComponent
+    
   ],
   imports: [
     BrowserModule,
