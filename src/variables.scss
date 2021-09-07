@@ -1,4 +1,5 @@
 $color-primary: #90d6ce;
+$color-secondary: hsl(236, 29%, 35%);
 $hauteur: 80vh;
 
 @mixin titleH1{
@@ -6,7 +7,46 @@ $hauteur: 80vh;
     font-weight: bold;
     margin-bottom: 8vh;
 }
-//FOOTER
+
+
+//FILTRES
+@mixin ulFiltrePC {
+    display: flex;
+    height: 40px;
+    margin: 4vh 0;
+    padding-left: 5vh;
+}
+@mixin liFiltrePC {
+    margin: 0 2vh;
+    border-bottom: 2px solid $color-primary;
+    display: flex;
+    justify-content: center;
+}
+@mixin inputFiltrePC {
+    width: 22vh;
+    height: 40px;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+}
+@mixin ulFiltreMobile {
+    flex-direction: column;
+    height: auto;
+    margin: 2vh 0;
+    padding-left: 0vh;
+}
+@mixin liFiltreMobile {
+    margin: 0;
+    width: 70%;
+    margin: auto;
+}
+@mixin inputFiltreMobile {
+    width: 100%;
+    font-size: 15px;
+}
+//FIN FILTRES
+
+//PAGES DU FOOTER
 @mixin structurePageFooter {
     width: 60%;
     margin: auto;
