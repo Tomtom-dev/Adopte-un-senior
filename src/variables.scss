@@ -1,0 +1,84 @@
+$color-primary: #90d6ce;
+$color-secondary: hsl(236, 29%, 35%);
+$hauteur: 80vh;
+$hauteur70: 70vh;
+$bcgcolorTransparent: transparent !important;
+
+@mixin titleH1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 8vh;
+}
+//FORMULAIRE
+@mixin formFormulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin inputFormulaire{
+    width: 30em;
+    font-size: 18px;
+}
+//FIN FORMULAIRE
+
+//FILTRES
+@mixin ulFiltrePC {
+    display: flex;
+    height: 40px;
+    margin: 4vh 0;
+    padding-left: 5vh;
+}
+@mixin liFiltrePC {
+    margin: 0 2vh;
+    border-bottom: 2px solid $color-primary;
+    display: flex;
+    justify-content: center;
+}
+@mixin inputFiltrePC {
+    width: 22vh;
+    height: 40px;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+}
+@mixin ulFiltreMobile {
+    flex-direction: column;
+    height: auto;
+    margin: 2vh 0;
+    padding-left: 0vh;
+}
+@mixin liFiltreMobile {
+    margin: 0;
+    width: 70%;
+    margin: auto;
+}
+@mixin inputFiltreMobile {
+    width: 100%;
+    font-size: 15px;
+}
+//FIN FILTRES
+
+//PAGES DU FOOTER
+@mixin structurePageFooter {
+    width: 60%;
+    margin: auto;
+    border: 1px solid transparent;
+    box-sizing: border-box;    
+}
+@mixin linkPageFooter {
+    display: flex;
+    align-content: center;
+    margin: 5vh 0;
+}
+@mixin titleH2PageFooter {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+@mixin pPageFooter {
+    font-size: 22px;
+    margin: 3vh 0;
+}
+//FIN FOOTER
+
+// @import '../../variables.scss';
