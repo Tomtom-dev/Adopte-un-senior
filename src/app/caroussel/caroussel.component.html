@@ -1,5 +1,8 @@
 
 <p-carousel [value]="annonces" [numVisible]="3" [numScroll]="1">
+    <ng-template pTemplate="header">
+      
+    </ng-template>
     <ng-template let-annonce let-car pTemplate="item" class="card-item-carrousel">
        <div class="test">
            <img src="{{annonce.img}}" alt="">
@@ -8,6 +11,9 @@
                <p class="description">{{annonce.description}}</p>
            </div>
            <button >Voir plus</button>
+           <div class="car-buttons p-mt-5">
+            
+        </div>
            
        </div>
        
