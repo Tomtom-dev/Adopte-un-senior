@@ -1,0 +1,32 @@
+$color-primary: #90d6ce;
+$hauteur: 80vh;
+
+@mixin titleH1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 8vh;
+}
+//FOOTER
+@mixin structurePageFooter {
+    width: 60%;
+    margin: auto;
+    border: 1px solid transparent;
+    box-sizing: border-box;    
+}
+@mixin linkPageFooter {
+    display: flex;
+    align-content: center;
+    margin: 5vh 0;
+}
+@mixin titleH2PageFooter {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+@mixin pPageFooter {
+    font-size: 22px;
+    margin: 3vh 0;
+}
+//FIN FOOTER
+
+// @import '../../variables.scss';
