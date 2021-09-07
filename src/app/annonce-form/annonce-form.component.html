@@ -1,0 +1,42 @@
+<h1>Créer une annonce</h1>
+<form [formGroup]="annonceForm" (ngSubmit)="addAnnonce()" >
+    <div class="field">
+        <mat-form-field appearance="fill">
+            <mat-label>Titre</mat-label>
+            <input matInput placeholder="Titre de l'annonce" formControlName="title" required>
+            <!-- <mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+    </div>
+    <div class="field">
+        <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select formControlName="type" required>
+              <mat-option value="Type 1">
+                Type 1
+              </mat-option>
+              <mat-option value="Type 2">
+                Type 2
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="field">
+        <mat-form-field appearance="fill">
+            <mat-label>Ville</mat-label>
+            <input matInput placeholder="Lieu" formControlName="localisation" required>
+        </mat-form-field>
+    </div>
+    <div class="field">
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Décrivez votre annonce" formControlName="description" required></textarea>
+        </mat-form-field>
+    </div>
+    <div class="loginBtn">
+        <button type="submit">Se connecter</button>
+        <span class="bottom"></span>
+        <span class="right"></span>
+        <span class="top"></span>
+        <span class="left"></span>
+    </div>
+</form>

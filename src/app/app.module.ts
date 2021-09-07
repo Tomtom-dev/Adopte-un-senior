@@ -12,10 +12,13 @@ import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous
 import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
+import { AnnonceFormComponent } from './annonce-form/annonce-form.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input'
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -31,15 +34,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AnnonceListComponent,
     AnnonceCardComponent,
     AnnonceFilterComponent,
+    AnnonceFormComponent
     AuthentificationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
     MatInputModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
     MatIconModule,
     MatFormFieldModule
   ],
