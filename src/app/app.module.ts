@@ -34,7 +34,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AnnonceListComponent,
     AnnonceCardComponent,
     AnnonceFilterComponent,
-    AnnonceFormComponent
+    AnnonceFormComponent,
     AuthentificationComponent
   ],
   imports: [
