@@ -15,6 +15,7 @@ import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-fi
 import { AnnonceFormComponent } from './annonce-form/annonce-form.component';
 
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -38,7 +39,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MatInputModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
