@@ -12,6 +12,7 @@ import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous
 import { AnnonceListComponent } from './annonce-list/annonce-list.component';
 import { AnnonceCardComponent } from './annonce-list/annonce-card/annonce-card.component';
 import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-filter.component';
+import { CarousselComponent } from './caroussel/caroussel.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-fi
     QuiSommesNousComponent,
     AnnonceListComponent,
     AnnonceCardComponent,
-    AnnonceFilterComponent
+    AnnonceFilterComponent,
+    CarousselComponent
   ],
   imports: [
     BrowserModule,
