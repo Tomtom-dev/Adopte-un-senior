@@ -1,14 +1,21 @@
 .nav-container{
+    display: flex;
     width: 100%;
     background-color: #90D6CE;
     height: 10vh;
     font-size: x-large;
-
+    border: 2px solid red;
     ul{
         display: flex;
         height: inherit;
         list-style-type: none;
         text-decoration: none;
+        align-items: center;
+       img{
+           margin-left: 1em;
+           width: 5vw;
+           height: 5vw;
+       }
         
         li{
             
