@@ -1,11 +1,10 @@
 <section>
     <h1>Authentification</h1>
-    <form action="">
-        <!-- <form [formGroup]="userLogin" (ngSubmit)="login()"> -->
+    <form [formGroup]="authForm" (ngSubmit)="login()">
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Entrer votre email</mat-label>
-                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <input matInput placeholder="pat@example.com" [formControl]="email" formControlName="email" required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
         </div>
@@ -13,7 +12,7 @@
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Entrer votre mot de passe</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -22,7 +21,7 @@
         </div>
 
         <div class="loginBtn">
-            <button type="submit">Se connecter</button>
+            <button type="submit" [disabled]="!authForm.valid">Se connecter</button>
             <span class="bottom"></span>
             <span class="right"></span>
             <span class="top"></span>

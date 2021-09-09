@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-authentification',
@@ -10,8 +10,14 @@ import {FormControl, Validators} from '@angular/forms';
 export class AuthentificationComponent implements OnInit {
 
   hide = true;
-  
-  constructor() { }
+  authForm: FormGroup;
+
+  constructor(fb: FormBuilder) {
+    this.authForm = new FormGroup({
+      email: new FormControl("", [Validators.email, Validators.required]),
+      password: new FormControl("", Validators.required)
+    })
+  }
 
   ngOnInit(): void {
   }
@@ -26,6 +32,8 @@ export class AuthentificationComponent implements OnInit {
     return this.email.hasError('email') ? 'Adresse mail invalide' : '';
   }
 
-  
+  login(){
+    console.log(this.authForm)
+  }
 
 }
