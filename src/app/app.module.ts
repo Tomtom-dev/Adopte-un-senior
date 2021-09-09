@@ -17,7 +17,7 @@ import { AnnonceFilterComponent } from './annonce-list/annonce-filter/annonce-fi
  import { ButtonModule } from 'primeng/button';
 import { AnnonceFormComponent } from './annonce-form/annonce-form.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
@@ -55,7 +55,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     MatSelectModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
