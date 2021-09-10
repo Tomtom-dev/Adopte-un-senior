@@ -22,8 +22,6 @@ export class AuthentificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // email = new FormControl('', [Validators.required, Validators.email]);
-
   getErrorMessage() {
     if (this.authForm.controls.email.hasError('required')) {
       return 'Veuillez entrer votre email';
