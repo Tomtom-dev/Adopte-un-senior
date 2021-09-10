@@ -1,1 +1,19 @@
 @import '../../variables.scss';
+
+section{
+    height: $hauteur70;
+  }
+  h1 {
+    text-align: center;
+    margin: 10vh 0 10vh 0;
+    @include titleH1;
+  }
+  form {
+    @include formFormulaire;
+  }
+  .mat-form-field {
+    @include inputFormulaire;
+  }
+  .mat-form-field-flex {
+    background-color: $bcgcolorTransparent;
+  }

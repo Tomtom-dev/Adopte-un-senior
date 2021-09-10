@@ -1,11 +1,40 @@
 <section>
     <h1>inscription</h1>
-    <form [formGroup]="authForm">
+    <form [formGroup]="authForm" >
         <div class="example-container">
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <mat-label>Nom</mat-label>
-                <input type="text" placeholder="Entrez votre nom">
+                <input matInput type="text" placeholder="Entrez votre nom" formControlName="name" required>
             </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Prenom</mat-label>
+                <input matInput type="text" placeholder="Entrez votre prnom" formControlName="" required>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Adresse mail</mat-label>
+                <input matInput type="text" placeholder="adresseMail@mail.com" formControlName="" required>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Mot de passe</mat-label>
+                <input matInput type="text" placeholder="Mot de passe" formControlName="" required>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Confirmation du mot de passe</mat-label>
+                <input matInput type="text" placeholder="Confirmation du mot de passe" formControlName="" required>
+            </mat-form-field>
+            <mat-error></mat-error>
         </div>
 
     </form>
