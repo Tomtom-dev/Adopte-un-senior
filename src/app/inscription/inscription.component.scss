@@ -5,8 +5,9 @@ section{
   }
   h1 {
     text-align: center;
-    margin: 10vh 0 10vh 0;
-    @include titleH1;
+    margin: 5vh 0 5vh 0;
+    font-size: 45px;
+    font-weight: bold;
   }
   form {
     @include formFormulaire;

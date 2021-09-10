@@ -28,7 +28,7 @@ export class InscriptionComponent implements OnInit {
   }
 
   subscribe(){
-    console.log(this.authForm);
+    console.log(this.authForm.value);
     
   }
 }
