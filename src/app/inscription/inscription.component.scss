@@ -17,3 +17,7 @@ section{
   .mat-form-field-flex {
     background-color: $bcgcolorTransparent;
   }
+
+  .subscriptionBtn {
+    @include btnFormulaire;
+  }

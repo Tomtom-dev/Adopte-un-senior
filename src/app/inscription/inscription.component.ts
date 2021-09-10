@@ -16,12 +16,19 @@ export class InscriptionComponent implements OnInit {
 
   constructor() {
     this.authForm = new FormGroup({
-      email: new FormControl("", [Validators.email, Validators.required]),
-      password: new FormControl("", Validators.required)
+      nom: new FormControl("", [Validators.email, Validators.required]),
+      prenom: new FormControl("", Validators.required),
+      mail: new FormControl("", Validators.required),
+      mdp: new FormControl("", Validators.required),
+      confMdp: new FormControl("", Validators.required)
     })
    }
 
   ngOnInit(): void {
   }
 
+  subscribe(){
+    console.log(this.authForm);
+    
+  }
 }
