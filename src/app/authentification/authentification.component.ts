@@ -12,7 +12,7 @@ export class AuthentificationComponent implements OnInit {
   hide = true;
   authForm: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor() {
     this.authForm = new FormGroup({
       email: new FormControl("", [Validators.email, Validators.required]),
       password: new FormControl("", Validators.required)
@@ -22,14 +22,14 @@ export class AuthentificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+  // email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
-    if (this.email.hasError('required')) {
+    if (this.authForm.controls.email.hasError('required')) {
       return 'Veuillez entrer votre email';
     }
 
-    return this.email.hasError('email') ? 'Adresse mail invalide' : '';
+    return this.authForm.controls.email.hasError('email') ? 'Adresse mail invalide' : '';
   }
 
   login(){
