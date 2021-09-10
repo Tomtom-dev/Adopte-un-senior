@@ -21,3 +21,7 @@ form {
 .loginBtn {
   @include btnFormulaire;
 }
+
+.linkInscription{
+  text-decoration: underline;
+}
