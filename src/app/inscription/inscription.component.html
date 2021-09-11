@@ -1,6 +1,19 @@
 <section>
     <h1>inscription</h1>
     <form [formGroup]="authForm" >
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Je suis : </mat-label>
+               <mat-select  >
+                   <mat-option   *ngFor="let choice of choices" [value]="choice.value" >
+                        {{choice.viewValue}}
+                   </mat-option>
+               </mat-select>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Nom</mat-label>
@@ -8,6 +21,7 @@
             </mat-form-field>
             <mat-error></mat-error>
         </div>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Prenom</mat-label>
@@ -15,6 +29,7 @@
             </mat-form-field>
             <mat-error></mat-error>
         </div>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Adresse mail</mat-label>
@@ -22,6 +37,7 @@
             </mat-form-field>
             <mat-error></mat-error>
         </div>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Mot de passe</mat-label>
@@ -29,6 +45,7 @@
             </mat-form-field>
             <mat-error></mat-error>
         </div>
+
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Confirmation du mot de passe</mat-label>
@@ -36,6 +53,7 @@
             </mat-form-field>
             <mat-error></mat-error>
         </div>
+
         <div class="subscriptionBtn">
             <button type="submit" (click)="subscribe()"  >S'inscrire</button>
             <span class="bottom"></span>
@@ -43,5 +61,6 @@
             <span class="top"></span>
             <span class="left"></span>
         </div>
+
     </form>
 </section>
