@@ -5,21 +5,21 @@
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Je suis : </mat-label>
-               <mat-select  >
+               <mat-select formControlName="type"  >
                    <mat-option   *ngFor="let choice of choices" [value]="choice.value" >
                         {{choice.viewValue}}
                    </mat-option>
                </mat-select>
             </mat-form-field>
-            <mat-error></mat-error>
+            <mat-error >{{getErrorMessageType()}}</mat-error>
         </div>
-
+        
         <div class="example-container">
             <mat-form-field appearance="fill">
                 <mat-label>Nom</mat-label>
                 <input matInput type="text" placeholder="Entrez votre nom" formControlName="nom" required>
             </mat-form-field>
-            <mat-error></mat-error>
+            <mat-error >{{getErrorMessageNom()}}</mat-error>
         </div>
 
         <div class="example-container">
@@ -27,7 +27,7 @@
                 <mat-label>Prenom</mat-label>
                 <input matInput type="text" placeholder="Entrez votre prenom" formControlName="prenom" required>
             </mat-form-field>
-            <mat-error></mat-error>
+            <mat-error>{{getErrorMessagePrenom()}}</mat-error>
         </div>
 
         <div class="example-container">
@@ -35,7 +35,7 @@
                 <mat-label>Adresse mail</mat-label>
                 <input matInput type="text" placeholder="adresseMail@mail.com" formControlName="mail" required>
             </mat-form-field>
-            <mat-error></mat-error>
+            <mat-error>{{getErrorMessageEmail()}}</mat-error>
         </div>
 
         <div class="example-container">

@@ -27,10 +27,10 @@ export class InscriptionComponent implements OnInit {
 
   constructor() {
     this.authForm = new FormGroup({
-      type: new FormControl("", Validators.required),
-      nom: new FormControl("", [Validators.email, Validators.required]),
+      type: new FormControl("", [Validators.minLength(3),Validators.required]),
+      nom: new FormControl("",  [Validators.minLength(3),Validators.required]),
       prenom: new FormControl("", Validators.required),
-      mail: new FormControl("", Validators.required),
+      mail: new FormControl("",[Validators.email, Validators.required]),
       mdp: new FormControl("", Validators.required),
       confMdp: new FormControl("", Validators.required)
     })
@@ -39,8 +39,38 @@ export class InscriptionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getErrorMessageType(){
+    if(this.authForm.controls.type.value === ""){
+      return "Veuillez précisez qui vous êtes"
+    }
+    return ""
+  }
+
+  getErrorMessageNom(){
+    if(this.authForm.controls.nom.status === "INVALID"){
+      return "le nom doit avoir 3 lettres minimum"
+    }
+    return ""
+  }
+
+  getErrorMessagePrenom(){
+    if(this.authForm.controls.prenom.status === "INVALID"){
+      return "le prenom doit avoir 3 lettres minimum"
+    }
+    return ""
+  }
+
+  getErrorMessageEmail(){
+    if(this.authForm.controls.mail.status === "INVALID"){
+      return "Veuillez entrer une adresse mail valide"
+    }
+    return ""
+  }
+
+  
+
   subscribe(){
-    console.log(this.authForm.value);
+    console.log(this.authForm);
     
   }
 }
