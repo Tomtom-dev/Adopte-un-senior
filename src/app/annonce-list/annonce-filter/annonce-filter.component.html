@@ -1,11 +1,20 @@
 <ul>
     <li>
-        <select name="entites" id="entites">
-            <option value="">Entités</option>
+        <select (ngModel)="entites" id="entites">
+            <option [value]="">Entités</option>
             <option value="association">Association</option>
             <option value="personne">Personne âgée</option>
             <option value="autre">Autre</option>
         </select>
+
+        <!-- <form [formGroup]="form" class="formFilter">
+        <li>
+            <select formControlName="valueEntite" id="entites">
+                <option *ngFor="let entite of entites" [value]="entite.myValue" [formControlName]="entite.myValue">
+                    {{entite.name}}
+                </option>
+            </select>
+        </li> -->
     </li>
     <li>
         <select name="typeService" id="typeService">
@@ -29,5 +38,10 @@
     </li>
     <li>
         <input type="date" id="start" name="date" value="2021-09-06">
+    </li>
+    <li class="search">
+        <button class="search btnSearch">
+            <i class="fas fa-search"></i>
+        </button>
     </li>
 </ul>
