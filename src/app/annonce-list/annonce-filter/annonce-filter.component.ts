@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { AnnonceService } from 'src/app/shared/service/annonce.service';
 
 @Component({
   selector: 'app-annonce-filter',
@@ -10,7 +11,7 @@ export class AnnonceFilterComponent implements OnInit {
 
   formFilter!: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private service: AnnonceService) {
     this.formFilter = new FormGroup({
       entites: new FormControl(""),
       typeService: new FormControl(""),
@@ -23,9 +24,23 @@ export class AnnonceFilterComponent implements OnInit {
 
   }
 
+  @Output() sendFilter:EventEmitter<any> = new EventEmitter();
 
+
+  data!: any;
+
+  /**
+   * Fonction qui permet d'envoyer les options choisies dans les 
+   * filtres au parent
+   */
   sendSearch() {
-    console.log(this.formFilter)
+    this.data = {
+      entites: this.formFilter.value.entites,
+      typeService: this.formFilter.value.typeService,
+      distance: this.formFilter.value.distance,
+      date: this.formFilter.value.date
+    }    
+    this.sendFilter.emit(this.data);
   }
 
 }

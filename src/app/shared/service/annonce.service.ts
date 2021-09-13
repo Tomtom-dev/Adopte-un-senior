@@ -11,11 +11,16 @@ export class AnnonceService {
 
   constructor(private http: HttpClient) { }
 
-  public getPosts(): Observable<Annonce[]>{
+  /**
+   * Récupère les toutes les annonces
+   * @returns tableau d'annonces
+   */
+  public getPosts(): Observable<Annonce[]> {
     return this.http.get<Annonce[]>(`${environment.url}/annonce/`);
   }
 
-  public addAnnonce(annonce : Annonce): Observable<Annonce>{
-    return this.http.post<Annonce>(`${environment.url}/annonce/`,annonce);
+  public addAnnonce(annonce: Annonce): Observable<Annonce> {
+    return this.http.post<Annonce>(`${environment.url}/annonce/`, annonce);
   }
+
 }
