@@ -1,4 +1,4 @@
-<form [formGroup]="formFilter" (ngSubmit)="sendSearch()">
+<form [formGroup]="formFilter" (ngSubmit)="sendSearch()" >
     <ul>
         <li>
             <select formControlName="entites" id="entites">
@@ -32,7 +32,7 @@
             <input type="date" id="start" formControlName="date" value="2021-09-06">
         </li>
         <li class="search">
-            <button class="search btnSearch" type="submit">
+            <button class="search btnSearch" type="submit" >
                 <i class="fas fa-search"></i>
             </button>
         </li>
