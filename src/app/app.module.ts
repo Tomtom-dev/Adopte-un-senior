@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { OptionFilterComponent } from './annonce-list/annonce-filter/option-filter/option-filter.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AnnonceFilterComponent,
     CarousselComponent,
     AnnonceFormComponent,
-    AuthentificationComponent
+    AuthentificationComponent,
+    OptionFilterComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,6 @@ export class AnnonceListComponent implements OnInit {
   ngOnInit(): void {
     this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
       this.annonces = annonce;
-      console.log(annonce)
     })
   }
 

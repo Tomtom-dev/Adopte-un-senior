@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-annonce-filter',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnnonceFilterComponent implements OnInit {
 
-  constructor() { }
+  formFilter!: FormGroup;
+
+  constructor(fb: FormBuilder) {
+    this.formFilter = new FormGroup({
+      entites: new FormControl(""),
+      typeService: new FormControl(""),
+      distance: new FormControl(""),
+      date: new FormControl(''),
+    });
+  }
 
   ngOnInit(): void {
+
+  }
+
+
+  sendSearch() {
+    console.log(this.formFilter)
   }
 
 }
