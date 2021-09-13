@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-annonce-filter',
@@ -8,27 +8,24 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AnnonceFilterComponent implements OnInit {
 
-  entites = [
-    { id: 1, myValue: "", name: "Entités" },
-    { id: 2, myValue: "association", name: "Association" },
-    { id: 3, myValue: "personne", name: "Personnes Âgées" },
-    { id: 4, myValue: "autre", name: "Autre" }
-  ]
-  selectedValue =null;
+  formFilter!: FormGroup;
 
-  
-  form = new FormGroup({
-    valueEntite: new FormControl("")
-  })
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(fb: FormBuilder) {
+    this.formFilter = new FormGroup({
+      entites: new FormControl(""),
+      typeService: new FormControl(""),
+      distance: new FormControl(""),
+      date: new FormControl(''),
+    });
   }
 
-  //Sur le btn search
-  formFilter(){
-    console.log(this.form)
+  ngOnInit(): void {
+
+  }
+
+
+  sendSearch() {
+    console.log(this.formFilter)
   }
 
 }
