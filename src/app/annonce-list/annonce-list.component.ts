@@ -29,11 +29,11 @@ export class AnnonceListComponent implements OnInit {
   updateFilter(filter: string): void{
     this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
       let filter1 = annonce.filter(ann => ann.type === filter[0])      
-      let filter2 = filter1.filter(ann => ann.typeService === filter[1])
+      let filter2 = filter1.filter(ann => ann.typeService === filter[1])    
       let filter3 = filter2.filter(ann => ann.localisation === filter[2])
       let filter4 = filter3.filter(ann => ann.date === new Date(filter[3]))
       
-      this.annonces = filter2;
+      this.annonces = filter3;
     })   
   }
 

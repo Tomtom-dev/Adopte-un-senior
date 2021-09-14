@@ -41,7 +41,7 @@ export class AnnonceFilterComponent implements OnInit {
     this.data = [
       this.formFilter.value.entites,
       this.formFilter.value.typeService,
-      this.formFilter.value.distance,
+      this.formFilter.value.localisation,
       this.formFilter.value.date
     ]
     this.sendFilter.emit(this.data);
