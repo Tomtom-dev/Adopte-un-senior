@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { OptionFilterComponent } from './annonce-list/annonce-filter/option-filter/option-filter.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
     CarousselComponent,
     AnnonceFormComponent,
     AuthentificationComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    OptionFilterComponent
   ],
   imports: [
     BrowserModule,

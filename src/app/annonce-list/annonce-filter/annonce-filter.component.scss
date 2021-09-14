@@ -2,11 +2,20 @@
 
 ul {
     @include ulFiltrePC;
+    .formFilter{
+        display: flex;
+    }
     li {
         @include liFiltrePC;
         select,
         input {
             @include inputFiltrePC;
+        }
+    }
+    .search{
+        border: none;
+        .btnSearch{
+            font-size: 25px;
         }
     }
 }
