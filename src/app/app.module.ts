@@ -25,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { NotAnnonceComponent } from './annonce-list/not-annonce/not-annonce.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     AnnonceFormComponent,
     AuthentificationComponent,
     InscriptionComponent,
+    NotAnnonceComponent,
   ],
   imports: [
     BrowserModule,

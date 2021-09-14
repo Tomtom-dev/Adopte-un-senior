@@ -1,6 +1,8 @@
-
 <app-annonce-filter (sendFilter)="updateFilter($event)"></app-annonce-filter>
 
 <h1>Toutes les annonces</h1>
 
-<app-annonce-card [annonce]="annonce" *ngFor="let annonce of annonces" ></app-annonce-card>
+<section>
+    <app-annonce-card [annonce]="annonce" *ngFor="let annonce of annonces"></app-annonce-card>
+    <app-not-annonce *ngIf="annonces.length === 0"></app-not-annonce>
+</section>

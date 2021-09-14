@@ -3,6 +3,9 @@ h1{
     @include titleH1;
     margin: 8vh 7vh;
 }
+section{
+    min-height: 52vh;
+}
 
 @media screen and (max-width: 767px) {
     h1{
