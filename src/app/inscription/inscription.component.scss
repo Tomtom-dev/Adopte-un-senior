@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+section{
+    height: $hauteur70;
+  }
+  h1 {
+    text-align: center;
+    margin: 5vh 0 5vh 0;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  form {
+    @include formFormulaire;
+  }
+  .mat-form-field {
+    @include inputFormulaire;
+  }
+  .mat-form-field-flex {
+    background-color: $bcgcolorTransparent;
+  }
+
+  .subscriptionBtn {
+    @include btnFormulaire;
+  }

@@ -1,0 +1,66 @@
+<section>
+    <h1>inscription</h1>
+    <form [formGroup]="authForm" >
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Je suis : </mat-label>
+               <mat-select formControlName="type"  >
+                   <mat-option   *ngFor="let choice of choices" [value]="choice.value" >
+                        {{choice.viewValue}}
+                   </mat-option>
+               </mat-select>
+            </mat-form-field>
+            <mat-error >{{getErrorMessageType()}}</mat-error>
+        </div>
+        
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Nom</mat-label>
+                <input matInput type="text" placeholder="Entrez votre nom" formControlName="nom" required>
+            </mat-form-field>
+            <mat-error >{{getErrorMessageNom()}}</mat-error>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Prenom</mat-label>
+                <input matInput type="text" placeholder="Entrez votre prenom" formControlName="prenom" required>
+            </mat-form-field>
+            <mat-error>{{getErrorMessagePrenom()}}</mat-error>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Adresse mail</mat-label>
+                <input matInput type="text" placeholder="adresseMail@mail.com" formControlName="mail" required>
+            </mat-form-field>
+            <mat-error>{{getErrorMessageEmail()}}</mat-error>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Mot de passe</mat-label>
+                <input matInput type="text" placeholder="Mot de passe" formControlName="mdp" required>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Confirmation du mot de passe</mat-label>
+                <input matInput type="text" placeholder="Confirmation du mot de passe" formControlName="confMdp" required>
+            </mat-form-field>
+            <mat-error></mat-error>
+        </div>
+
+        <div class="subscriptionBtn">
+            <button type="submit" (click)="subscribe()"  >S'inscrire</button>
+            <span class="bottom"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="left"></span>
+        </div>
+
+    </form>
+</section>

@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { InscriptionComponent } from './inscription/inscription.component';
 import { OptionFilterComponent } from './annonce-list/annonce-filter/option-filter/option-filter.component';
 
 
@@ -42,6 +43,7 @@ import { OptionFilterComponent } from './annonce-list/annonce-filter/option-filt
     CarousselComponent,
     AnnonceFormComponent,
     AuthentificationComponent,
+    InscriptionComponent,
     OptionFilterComponent
   ],
   imports: [
