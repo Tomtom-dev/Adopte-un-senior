@@ -7,6 +7,7 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { ConfidentialiteComponent } from './footer/confidentialite/confidentialite.component';
 import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
 import { QuiSommesNousComponent } from './footer/qui-sommes-nous/qui-sommes-nous.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 const routes: Routes = [
   {path:'' , redirectTo:'accueil', pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"quisommesnous", component: QuiSommesNousComponent},
   {path: "annonces", component: AnnonceListComponent},
   {path:'annonces/add', component: AnnonceFormComponent, pathMatch:'full'},
-  {path: "auth", component: AuthentificationComponent}
+  {path: "auth", component: AuthentificationComponent},
+  {path:"inscription", component: InscriptionComponent}
 ];
 
 @NgModule({

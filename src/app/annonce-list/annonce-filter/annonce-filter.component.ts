@@ -9,7 +9,7 @@ import { AnnonceService } from 'src/app/shared/service/annonce.service';
 })
 export class AnnonceFilterComponent implements OnInit {
 
-  formFilter!: FormGroup;
+  formFilter: FormGroup;
 
   constructor(fb: FormBuilder, private service: AnnonceService) {
     this.formFilter = new FormGroup({
