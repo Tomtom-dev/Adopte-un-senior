@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Annonce } from 'src/app/shared/models/annonce';
 import { AnnonceService } from 'src/app/shared/service/annonce.service';
 
 @Component({
@@ -10,18 +11,21 @@ import { AnnonceService } from 'src/app/shared/service/annonce.service';
 export class AnnonceFilterComponent implements OnInit {
 
   formFilter: FormGroup;
+  localisationList= new Array();
 
   constructor(fb: FormBuilder, private service: AnnonceService) {
     this.formFilter = new FormGroup({
       entites: new FormControl(""),
       typeService: new FormControl(""),
-      distance: new FormControl(""),
+      localisation: new FormControl(""),
       date: new FormControl(''),
     });
   }
 
   ngOnInit(): void {
-
+    this.service.getPosts().subscribe((annonces: Annonce[]) => {
+      annonces.forEach(annonce => this.localisationList.push(annonce.localisation));
+    })       
   }
 
   @Output() sendFilter: EventEmitter<any> = new EventEmitter();

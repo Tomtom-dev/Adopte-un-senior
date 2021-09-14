@@ -1,4 +1,4 @@
-<form [formGroup]="formFilter" (ngSubmit)="sendSearch()" >
+<form [formGroup]="formFilter" (ngSubmit)="sendSearch()">
     <ul>
         <li>
             <select formControlName="entites" id="entites">
@@ -19,20 +19,17 @@
             </select>
         </li>
         <li>
-            <select formControlName="distance" id="distance">
-                <option value="">Distance</option>
-                <option value="0">0km</option>
-                <option value="5">5km</option>
-                <option value="10km">10km</option>
-                <option value="20km">20km</option>
-                <option value="50km">50km</option>
+            <select formControlName="localisation" id="distance">
+                <option ngValue="">Ville</option>
+                <option *ngFor="let opt of localisationList" [value]="opt" [selected]="opt.selected == true">{{opt}}
+                </option>
             </select>
         </li>
         <li>
             <input type="date" id="start" formControlName="date" value="2021-09-06">
         </li>
         <li class="search">
-            <button class="search btnSearch" type="submit" >
+            <button class="search btnSearch" type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </li>
