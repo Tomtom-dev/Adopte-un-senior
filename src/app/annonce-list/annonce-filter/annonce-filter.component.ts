@@ -24,7 +24,7 @@ export class AnnonceFilterComponent implements OnInit {
 
   }
 
-  @Output() sendFilter:EventEmitter<any> = new EventEmitter();
+  @Output() sendFilter: EventEmitter<any> = new EventEmitter();
 
 
   data!: any;
@@ -34,12 +34,12 @@ export class AnnonceFilterComponent implements OnInit {
    * filtres au parent
    */
   sendSearch() {
-    this.data = {
-      entites: this.formFilter.value.entites,
-      typeService: this.formFilter.value.typeService,
-      distance: this.formFilter.value.distance,
-      date: this.formFilter.value.date
-    }    
+    this.data = [
+      this.formFilter.value.entites,
+      this.formFilter.value.typeService,
+      this.formFilter.value.distance,
+      this.formFilter.value.date
+    ]
     this.sendFilter.emit(this.data);
   }
 

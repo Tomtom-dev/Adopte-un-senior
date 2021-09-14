@@ -27,9 +27,14 @@ export class AnnonceListComponent implements OnInit {
    * @param filter string qui récupère les filtres
    */
   updateFilter(filter: string): void{
-    console.log(filter);
-    //Nouvelle liste selon les filtres !!!!!!!!
-    //.filter sur le tableau ???
+    this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
+      let filter1 = annonce.filter(ann => ann.type === filter[0])      
+      let filter2 = filter1.filter(ann => ann.typeService === filter[1])
+      let filter3 = filter2.filter(ann => ann.localisation === filter[2])
+      let filter4 = filter3.filter(ann => ann.date === new Date(filter[3]))
+      
+      this.annonces = filter2;
+    })   
   }
 
 }
