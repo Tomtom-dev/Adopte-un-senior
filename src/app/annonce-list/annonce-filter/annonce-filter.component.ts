@@ -37,7 +37,7 @@ export class AnnonceFilterComponent implements OnInit {
    * Fonction qui permet d'envoyer les options choisies dans les 
    * filtres au parent
    */
-  sendSearch() {
+  sendSearch() {    
     this.data = [
       this.formFilter.value.entites,
       this.formFilter.value.typeService,
