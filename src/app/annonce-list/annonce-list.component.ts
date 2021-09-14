@@ -28,9 +28,9 @@ export class AnnonceListComponent implements OnInit {
    */
   updateFilter(filter: string): void {
     this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
-      let filter1, filter2, filter3;
-      console.log(Boolean(filter[1]));
-      
+
+      let filter1, filter2, filter3;     
+       
       if (Boolean(filter[0])) {   
         filter1 = annonce.filter(ann => ann.type === filter[0]) 
       } else {       
