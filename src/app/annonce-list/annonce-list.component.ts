@@ -29,6 +29,7 @@ export class AnnonceListComponent implements OnInit {
   updateFilter(filter: string): void{
     console.log(filter);
     //Nouvelle liste selon les filtres !!!!!!!!
+    //.filter sur le tableau ???
   }
 
 }
