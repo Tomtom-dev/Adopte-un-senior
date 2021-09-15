@@ -29,7 +29,7 @@ export class AnnonceListComponent implements OnInit {
   updateFilter(filter: string): void {
     this.annonceService.getPosts().subscribe((annonce: Annonce[]) => {
 
-      let filter1, filter2, filter3;     
+      let filter1, filter2, filter3, filter4;     
        
       if (Boolean(filter[0])) {   
         filter1 = annonce.filter(ann => ann.type === filter[0]) 
@@ -46,10 +46,13 @@ export class AnnonceListComponent implements OnInit {
       } else {
         filter3 = filter2
       }
-
-      // let filter4 = filter3.filter(ann => ann.date === new Date(filter[3]))
-
-      this.annonces = filter3;
+      if(Boolean(filter[3]) && Boolean(filter[4])){
+        filter4 = filter3.filter(ann => new Date(ann.date) > new Date(filter[3]) && new Date(ann.date) < new Date(filter[4]))
+      } else {
+        filter4 = filter3
+      }
+      
+      this.annonces = filter4;
     })
   }
 

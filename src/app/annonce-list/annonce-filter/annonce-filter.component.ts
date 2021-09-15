@@ -18,7 +18,8 @@ export class AnnonceFilterComponent implements OnInit {
       entites: new FormControl(""),
       typeService: new FormControl(""),
       localisation: new FormControl(""),
-      date: new FormControl(''),
+      date1: new FormControl(''),
+      date2: new FormControl(''),
     });
   }
 
@@ -42,7 +43,8 @@ export class AnnonceFilterComponent implements OnInit {
       this.formFilter.value.entites,
       this.formFilter.value.typeService,
       this.formFilter.value.localisation,
-      this.formFilter.value.date
+      this.formFilter.value.date1,
+      this.formFilter.value.date2
     ]
     this.sendFilter.emit(this.data);
   }
