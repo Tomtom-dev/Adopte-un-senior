@@ -26,7 +26,7 @@ export class AnnonceFilterComponent implements OnInit {
   ngOnInit(): void {
     this.service.getPosts().subscribe((annonces: Annonce[]) => {
       annonces.forEach(annonce => this.localisationList.push(annonce.localisation));
-    })       
+    })      
   }
 
   @Output() sendFilter: EventEmitter<any> = new EventEmitter();

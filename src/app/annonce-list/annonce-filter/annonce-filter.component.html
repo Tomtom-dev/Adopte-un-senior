@@ -21,7 +21,7 @@
         <li>
             <select formControlName="localisation" id="distance">
                 <option ngValue="">Ville</option>
-                <option *ngFor="let opt of localisationList" [value]="opt" [selected]="opt.selected == true">{{opt}}
+                <option *ngFor="let opt of localisationList.sort()" [value]="opt" [selected]="opt.selected == true">{{opt}}
                 </option>
             </select>
         </li>
