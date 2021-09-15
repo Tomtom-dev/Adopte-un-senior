@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import Validation from '../validation';
 
 interface Choice {
   value: string;
@@ -27,12 +28,14 @@ export class InscriptionComponent implements OnInit {
 
   constructor() {
     this.authForm = new FormGroup({
-      type: new FormControl("", [Validators.minLength(3),Validators.required]),
+      type: new FormControl("", Validators.required),
       nom: new FormControl("",  [Validators.minLength(3),Validators.required]),
-      prenom: new FormControl("", Validators.required),
+      prenom: new FormControl("", [Validators.minLength(3),Validators.required]),
       mail: new FormControl("",[Validators.email, Validators.required]),
       mdp: new FormControl("", Validators.required),
       confMdp: new FormControl("", Validators.required)
+    }, {
+      validators: [Validation.match('mdp','confMdp')]
     })
    }
 

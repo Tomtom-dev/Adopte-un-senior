@@ -11,7 +11,7 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-error>{{getErrorMessageType()}}</mat-error>
+            <mat-error *ngIf="authForm.status === 'INVALID' && authForm.controls.type.touched===true" >{{getErrorMessageType()}}</mat-error>
         </div>
 
         <div class="example-container">
@@ -19,7 +19,7 @@
                 <mat-label>Nom</mat-label>
                 <input matInput type="text" placeholder="Entrez votre nom" formControlName="nom" required>
             </mat-form-field>
-            <mat-error>{{getErrorMessageNom()}}</mat-error>
+            <mat-error *ngIf="authForm.status === 'INVALID' && authForm.controls.nom.touched===true" >{{getErrorMessageNom()}}</mat-error>
         </div>
 
         <div class="example-container">
@@ -27,7 +27,7 @@
                 <mat-label>Prenom</mat-label>
                 <input matInput type="text" placeholder="Entrez votre prenom" formControlName="prenom" required>
             </mat-form-field>
-            <mat-error>{{getErrorMessagePrenom()}}</mat-error>
+            <mat-error *ngIf="authForm.status === 'INVALID' && authForm.controls.prenom.touched===true">{{getErrorMessagePrenom()}}</mat-error>
         </div>
 
         <div class="example-container">
@@ -35,7 +35,7 @@
                 <mat-label>Adresse mail</mat-label>
                 <input matInput type="text" placeholder="adresseMail@mail.com" formControlName="mail" required>
             </mat-form-field>
-            <mat-error>{{getErrorMessageEmail()}}</mat-error>
+            <mat-error *ngIf="authForm.status === 'INVALID' && authForm.controls.mail.touched">{{getErrorMessageEmail()}}</mat-error>
         </div>
 
         <div class="example-container">
