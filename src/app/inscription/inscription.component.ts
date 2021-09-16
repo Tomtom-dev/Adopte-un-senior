@@ -32,7 +32,9 @@ export class InscriptionComponent implements OnInit {
       nom: new FormControl("",  [Validators.minLength(3),Validators.required]),
       prenom: new FormControl("", [Validators.minLength(3),Validators.required]),
       mail: new FormControl("",[Validators.email, Validators.required]),
-      mdp: new FormControl("", Validators.required),
+      mdp: new FormControl("", [
+        Validators.required,
+        Validators.pattern('((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&]).{8,30})')]),
       confMdp: new FormControl("", Validators.required)
     }, {
       validators: [Validation.match('mdp','confMdp')]
@@ -69,8 +71,6 @@ export class InscriptionComponent implements OnInit {
     }
     return ""
   }
-
-  
 
   subscribe(){
     console.log(this.authForm);
